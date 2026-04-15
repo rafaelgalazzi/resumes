@@ -4,7 +4,8 @@
   "description": "",
   "main": "html-to-pdf.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "make": "node html-to-pdf.js"
   },
   "repository": {
     "type": "git",

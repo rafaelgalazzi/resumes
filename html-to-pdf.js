@@ -2,6 +2,9 @@ const puppeteer = require('puppeteer');
 const path = require('path');
 const fs = require('fs');
 
+const outputDir = path.resolve(__dirname, 'output');
+if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
+
 const files = [
   'Cover Letter.html',
   'Rafael_Galazzi_CV_Portugues_Final.html',
@@ -20,7 +23,7 @@ const files = [
     }
 
     const outputName = path.basename(file, '.html') + '.pdf';
-    const outputPath = path.resolve(__dirname, outputName);
+    const outputPath = path.resolve(outputDir, outputName);
 
     const page = await browser.newPage();
     await page.goto(`file:///${inputPath.replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' });
