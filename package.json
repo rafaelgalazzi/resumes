@@ -1,0 +1,24 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "html-to-pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelgalazzi/RESUMES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rafaelgalazzi/RESUMES/issues"
+  },
+  "homepage": "https://github.com/rafaelgalazzi/RESUMES#readme",
+  "dependencies": {
+    "puppeteer": "^24.41.0"
+  }
+}
