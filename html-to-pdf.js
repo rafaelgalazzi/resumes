@@ -1,14 +1,14 @@
-const puppeteer = require('puppeteer');
-const path = require('path');
-const fs = require('fs');
+const puppeteer = require("puppeteer");
+const path = require("path");
+const fs = require("fs");
 
-const outputDir = path.resolve(__dirname, 'output');
+const outputDir = path.resolve(__dirname, "output");
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
 const files = [
-  'Cover Letter.html',
-  'Rafael_Galazzi_CV_Portugues_Final.html',
-  'Rafael_Galazzi_CV_SmallFont.html',
+  "Cover Letter.html",
+  "Rafael_Galazzi_CV_Portugues_Final.html",
+  "Rafael_Galazzi_CV_English.html",
 ];
 
 (async () => {
@@ -22,17 +22,19 @@ const files = [
       continue;
     }
 
-    const outputName = path.basename(file, '.html') + '.pdf';
+    const outputName = path.basename(file, ".html") + ".pdf";
     const outputPath = path.resolve(outputDir, outputName);
 
     const page = await browser.newPage();
-    await page.goto(`file:///${inputPath.replace(/\\/g, '/')}`, { waitUntil: 'networkidle0' });
+    await page.goto(`file:///${inputPath.replace(/\\/g, "/")}`, {
+      waitUntil: "networkidle0",
+    });
 
     await page.pdf({
       path: outputPath,
-      format: 'A4',
+      format: "A4",
       printBackground: true,
-      margin: { top: '15mm', bottom: '15mm', left: '15mm', right: '15mm' },
+      margin: { top: "15mm", bottom: "15mm", left: "15mm", right: "15mm" },
     });
 
     await page.close();
@@ -40,5 +42,5 @@ const files = [
   }
 
   await browser.close();
-  console.log('Done.');
+  console.log("Done.");
 })();
