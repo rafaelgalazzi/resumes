@@ -2,6 +2,9 @@ const puppeteer = require("puppeteer");
 const path = require("path");
 const fs = require("fs");
 
+// Todo Adicionar uma automação para conectar com uma IA para automatizar a criação
+// de cover letter de acordo com a vaga inserida no prompt 
+
 const outputDir = path.resolve(__dirname, "output");
 if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir);
 
