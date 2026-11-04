@@ -3,76 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rafael A. L. Galazzi - Senior Full-Stack Developer</title>
+    <title>Rafael A. L. Galazzi — Senior Full-Stack Developer</title>
     <style>
       * {
         box-sizing: border-box;
       }
+      :root {
+        --ink: #252a30;
+        --muted: #59636c;
+        --rule: #bbc6ce;
+        --link: #194d70;
+      }
       body {
         max-width: 800px;
-        margin: 32px auto;
+        margin: 30px auto;
         padding: 0 24px;
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 10.5pt;
-        line-height: 1.4;
-        color: #252525;
+        line-height: 1.39;
+        color: var(--ink);
       }
       h1 {
         margin: 0 0 3px;
-        font-size: 24pt;
-        line-height: 1.15;
+        font-size: 21pt;
+        line-height: 1.13;
+        letter-spacing: -0.3px;
       }
       .title {
         margin: 0 0 8px;
-        font-size: 13pt;
-        font-weight: bold;
+        font-size: 12pt;
+        font-weight: 700;
       }
       .contact {
         margin: 0;
-        font-size: 10pt;
+        color: var(--muted);
+        font-size: 9.5pt;
+        line-height: 1.4;
       }
       a {
-        color: #194d70;
+        color: var(--link);
         text-decoration: none;
       }
       h2 {
-        margin: 18px 0 8px;
+        margin: 17px 0 7px;
         padding-bottom: 4px;
-        border-bottom: 1px solid #bfc8ce;
-        font-size: 12pt;
+        border-bottom: 1px solid var(--rule);
+        font-size: 11.5pt;
+        line-height: 1.2;
+        font-weight: 700;
       }
       h3 {
-        margin: 12px 0 2px;
-        font-size: 11pt;
+        margin: 12px 0 1px;
+        font-size: 10.7pt;
+        line-height: 1.25;
       }
       p {
         margin: 5px 0;
       }
       .dates {
         margin: 0 0 6px;
-        color: #555;
-        font-size: 10pt;
+        color: var(--muted);
+        font-size: 9.4pt;
       }
       ul {
         margin: 6px 0 0;
-        padding-left: 18px;
+        padding-left: 17px;
       }
       li {
-        margin-bottom: 6px;
+        margin-bottom: 5px;
+        padding-left: 1px;
+      }
+      li::marker {
+        color: #667580;
+      }
+      strong {
+        font-weight: 700;
       }
       .skills p {
         margin: 5px 0;
+        font-size: 9.6pt;
+        line-height: 1.35;
+      }
+      .development li {
+        margin-bottom: 4px;
       }
       @media print {
         @page {
           size: A4;
           margin: 15mm;
         }
+        html,
         body {
-          max-width: none;
           margin: 0;
           padding: 0;
-          font-size: 10pt;
+          max-width: none;
+        }
+        body {
+          font-size: 9.7pt;
+          line-height: 1.32;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        h1 {
+          font-size: 20pt;
+        }
+        .title {
+          font-size: 11.6pt;
+          margin-bottom: 6px;
+        }
+        .contact {
+          font-size: 9pt;
+          line-height: 1.33;
+        }
+        h2 {
+          font-size: 11pt;
+          margin: 12px 0 6px;
+          padding-bottom: 3px;
+        }
+        h3 {
+          font-size: 10.2pt;
+          margin: 9px 0 1px;
+        }
+        p {
+          margin: 4px 0;
+        }
+        .dates {
+          font-size: 9pt;
+          margin-bottom: 4px;
+        }
+        ul {
+          margin-top: 4px;
+          padding-left: 17px;
+        }
+        li {
+          margin-bottom: 3.5px;
+        }
+        .skills p {
+          font-size: 9.4pt;
+          line-height: 1.33;
         }
         h1,
         h2,
@@ -96,17 +164,21 @@
     </style>
   </head>
   <body>
-    <h1>Rafael A. L. Galazzi</h1>
-    <p class="title">Senior Full-Stack Developer</p>
-    <p class="contact">
-      +55 27 99578-6669 &middot;
-      <a href="mailto:rafaelgalazzi.dev@gmail.com"
-        >rafaelgalazzi.dev@gmail.com</a
-      ><br />
-      <a href="https://www.linkedin.com/in/rafael-galazzi-786487130/"
-        >linkedin.com/in/rafael-galazzi-786487130</a
-      >
-    </p>
+    <header>
+      <h1>Rafael A. L. Galazzi</h1>
+      <p class="title">Senior Full-Stack Developer</p>
+      <p class="contact">
+        Brazil · Open to Remote Opportunities<br />
+        +55 27 99578-6669 ·
+        <a href="mailto:rafaelgalazzi.dev@gmail.com"
+          >rafaelgalazzi.dev@gmail.com</a
+        >
+        ·
+        <a href="https://www.linkedin.com/in/rafael-galazzi-786487130/"
+          >linkedin.com/in/rafael-galazzi-786487130</a
+        >
+      </p>
+    </header>
 
     <section>
       <h2>Summary</h2>
@@ -122,16 +194,17 @@
 
     <section>
       <h2>Experience</h2>
-      <h3>Senior Full-Stack Developer &mdash; IOASYS</h3>
-      <p class="dates">September 2025 &ndash; Present</p>
+      <h3>Senior Full-Stack Developer — IOASYS</h3>
+      <p class="dates">September 2025 – Present</p>
       <p>
         Work in a 12-person team on a strategic project for a major Brazilian
         healthcare company specializing in medical diagnostics.
       </p>
       <ul>
         <li>
-          Design and optimize APIs, improving response times by up to 30%
-          through performance tuning and system design improvements.
+          Design and optimize APIs, improving response times by up to
+          <strong>30%</strong> through performance tuning and system design
+          improvements.
         </li>
         <li>
           Implement offline-first functionality as part of a system redesign
@@ -154,20 +227,21 @@
         <li>
           Implement GA4 business events, Grafana Faro telemetry, and custom
           connectivity, latency, memory, and mobile signal monitoring, reducing
-          error-related escalations to the team by 90% and CloudWatch costs by
-          50%, while supporting failure investigation and product decisions.
+          error-related escalations to the team by <strong>90%</strong> and
+          CloudWatch costs by <strong>50%</strong>, while supporting failure
+          investigation and product decisions.
         </li>
         <li>
           Apply specification-driven AI development workflows and build Model
           Context Protocol (MCP) servers connecting agents to debugging tools
           and Jira, supporting investigation and checks against ticket
           requirements, acceptance criteria, and test results, improving
-          development workflow speed by approximately 20%.
+          development workflow speed by approximately <strong>20%</strong>.
         </li>
       </ul>
 
-      <h3>Full-Stack Developer &mdash; BYTE RAIN IT SOLUTIONS</h3>
-      <p class="dates">May 2021 &ndash; September 2025</p>
+      <h3>Full-Stack Developer — BYTE RAIN IT SOLUTIONS</h3>
+      <p class="dates">May 2021 – September 2025</p>
       <ul>
         <li>
           Built web applications with TypeScript, JavaScript, Vue.js, React, and
@@ -175,23 +249,25 @@
         </li>
         <li>
           Developed a real estate platform for the Japanese market receiving
-          tens of thousands of daily visits.
+          <strong>tens of thousands of daily visits</strong>.
         </li>
         <li>
           Implemented Redis caching, improving API and page performance by up to
-          20x.
+          <strong>20x</strong>.
         </li>
         <li>
           Built customer support and logistics dashboards, reducing response
-          times by 30% and manual errors by 40%.
+          times by <strong>30%</strong> and manual errors by
+          <strong>40%</strong>.
         </li>
         <li>
           Created a QR code university access system with real-time
-          microservices and PWA support, serving 5,000+ users daily.
+          microservices and PWA support, serving
+          <strong>5,000+ users daily</strong>.
         </li>
         <li>
-          Developed a medical scheduling system handling more than 3,000
-          appointments weekly.
+          Developed a medical scheduling system handling more than
+          <strong>3,000 appointments weekly</strong>.
         </li>
         <li>
           Designed PostgreSQL, MySQL, and MongoDB databases using Sequelize and
@@ -228,28 +304,24 @@
       <h2>Education</h2>
       <p>
         <strong
-          >Bachelor's Degree in Chemical Engineering &mdash; Faculdade
-          UCL</strong
-        ><br />2015 &ndash; 2021
+          >Bachelor's Degree in Chemical Engineering — Faculdade UCL</strong
+        ><br />2015 – 2021
       </p>
     </section>
 
     <section class="development">
       <h2>Professional Development</h2>
       <ul>
+        <li><strong>Node.js: Advanced Concepts</strong> — Udemy, June 2025</li>
         <li>
-          <strong>Node.js: Advanced Concepts</strong> &mdash; Udemy, June 2025
+          <strong>The Complete SQL Bootcamp</strong> — Udemy, January 2025
         </li>
         <li>
-          <strong>The Complete SQL Bootcamp</strong> &mdash; Udemy, January 2025
+          <strong>The Last Algorithms Course You'll Need</strong> — Frontend
+          Masters, November 2024
         </li>
         <li>
-          <strong>The Last Algorithms Course You'll Need</strong> &mdash;
-          Frontend Masters, November 2024
-        </li>
-        <li>
-          <strong>TypeScript Program and Vue 3 Framework</strong> &mdash; Alura,
-          2023
+          <strong>TypeScript Program and Vue 3 Framework</strong> — Alura, 2023
         </li>
       </ul>
     </section>
@@ -257,8 +329,8 @@
     <section class="languages">
       <h2>Languages</h2>
       <p>
-        Portuguese: Native &middot; English: Fluent &middot; Japanese: Advanced
-        &middot; Spanish: Advanced
+        Portuguese: Native · English: Fluent · Japanese: Advanced · Spanish:
+        Advanced
       </p>
     </section>
   </body>

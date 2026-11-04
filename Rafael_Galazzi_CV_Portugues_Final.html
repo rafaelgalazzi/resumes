@@ -3,76 +3,144 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rafael A. L. Galazzi - Desenvolvedor Full-Stack Sênior</title>
+    <title>Rafael A. L. Galazzi — Desenvolvedor Full-Stack Sênior</title>
     <style>
       * {
         box-sizing: border-box;
       }
+      :root {
+        --ink: #252a30;
+        --muted: #59636c;
+        --rule: #bbc6ce;
+        --link: #194d70;
+      }
       body {
         max-width: 800px;
-        margin: 32px auto;
+        margin: 30px auto;
         padding: 0 24px;
-        font-family: Arial, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         font-size: 10.5pt;
-        line-height: 1.4;
-        color: #252525;
+        line-height: 1.39;
+        color: var(--ink);
       }
       h1 {
         margin: 0 0 3px;
-        font-size: 24pt;
-        line-height: 1.15;
+        font-size: 21pt;
+        line-height: 1.13;
+        letter-spacing: -0.3px;
       }
       .title {
         margin: 0 0 8px;
-        font-size: 13pt;
-        font-weight: bold;
+        font-size: 12pt;
+        font-weight: 700;
       }
       .contact {
         margin: 0;
-        font-size: 10pt;
+        color: var(--muted);
+        font-size: 9.5pt;
+        line-height: 1.4;
       }
       a {
-        color: #194d70;
+        color: var(--link);
         text-decoration: none;
       }
       h2 {
-        margin: 18px 0 8px;
+        margin: 17px 0 7px;
         padding-bottom: 4px;
-        border-bottom: 1px solid #bfc8ce;
-        font-size: 12pt;
+        border-bottom: 1px solid var(--rule);
+        font-size: 11.5pt;
+        line-height: 1.2;
+        font-weight: 700;
       }
       h3 {
-        margin: 12px 0 2px;
-        font-size: 11pt;
+        margin: 12px 0 1px;
+        font-size: 10.7pt;
+        line-height: 1.25;
       }
       p {
         margin: 5px 0;
       }
       .dates {
         margin: 0 0 6px;
-        color: #555;
-        font-size: 10pt;
+        color: var(--muted);
+        font-size: 9.4pt;
       }
       ul {
         margin: 6px 0 0;
-        padding-left: 18px;
+        padding-left: 17px;
       }
       li {
-        margin-bottom: 6px;
+        margin-bottom: 5px;
+        padding-left: 1px;
+      }
+      li::marker {
+        color: #667580;
+      }
+      strong {
+        font-weight: 700;
       }
       .skills p {
         margin: 5px 0;
+        font-size: 9.6pt;
+        line-height: 1.35;
+      }
+      .development li {
+        margin-bottom: 4px;
       }
       @media print {
         @page {
           size: A4;
           margin: 15mm;
         }
+        html,
         body {
-          max-width: none;
           margin: 0;
           padding: 0;
-          font-size: 10pt;
+          max-width: none;
+        }
+        body {
+          font-size: 9.7pt;
+          line-height: 1.32;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        h1 {
+          font-size: 20pt;
+        }
+        .title {
+          font-size: 11.6pt;
+          margin-bottom: 6px;
+        }
+        .contact {
+          font-size: 9pt;
+          line-height: 1.33;
+        }
+        h2 {
+          font-size: 11pt;
+          margin: 12px 0 6px;
+          padding-bottom: 3px;
+        }
+        h3 {
+          font-size: 10.2pt;
+          margin: 9px 0 1px;
+        }
+        p {
+          margin: 4px 0;
+        }
+        .dates {
+          font-size: 9pt;
+          margin-bottom: 4px;
+        }
+        ul {
+          margin-top: 4px;
+          padding-left: 17px;
+        }
+        li {
+          margin-bottom: 3.5px;
+        }
+        .skills p {
+          font-size: 9.4pt;
+          line-height: 1.33;
         }
         h1,
         h2,
@@ -96,17 +164,21 @@
     </style>
   </head>
   <body>
-    <h1>Rafael A. L. Galazzi</h1>
-    <p class="title">Desenvolvedor Full-Stack Sênior</p>
-    <p class="contact">
-      +55 27 99578-6669 &middot;
-      <a href="mailto:rafaelgalazzi.dev@gmail.com"
-        >rafaelgalazzi.dev@gmail.com</a
-      ><br />
-      <a href="https://www.linkedin.com/in/rafael-galazzi-786487130/"
-        >linkedin.com/in/rafael-galazzi-786487130</a
-      >
-    </p>
+    <header>
+      <h1>Rafael A. L. Galazzi</h1>
+      <p class="title">Desenvolvedor Full-Stack Sênior</p>
+      <p class="contact">
+        Brasil · Disponível para oportunidades remotas<br />
+        +55 27 99578-6669 ·
+        <a href="mailto:rafaelgalazzi.dev@gmail.com"
+          >rafaelgalazzi.dev@gmail.com</a
+        >
+        ·
+        <a href="https://www.linkedin.com/in/rafael-galazzi-786487130/"
+          >linkedin.com/in/rafael-galazzi-786487130</a
+        >
+      </p>
+    </header>
 
     <section>
       <h2>Resumo profissional</h2>
@@ -122,8 +194,8 @@
 
     <section>
       <h2>Experiência profissional</h2>
-      <h3>Desenvolvedor Full-Stack Sênior &mdash; IOASYS</h3>
-      <p class="dates">Setembro de 2025 &ndash; Atual</p>
+      <h3>Desenvolvedor Full-Stack Sênior — IOASYS</h3>
+      <p class="dates">Setembro de 2025 – Atual</p>
       <p>
         Atuo em uma equipe de 12 pessoas em um projeto estratégico para uma
         grande empresa brasileira de saúde especializada em diagnósticos
@@ -131,8 +203,9 @@
       </p>
       <ul>
         <li>
-          Projeto e otimizo APIs, reduzindo os tempos de resposta em até 30% por
-          meio de ajustes de desempenho e melhorias no projeto dos sistemas.
+          Projeto e otimizo APIs, reduzindo os tempos de resposta em até
+          <strong>30%</strong> por meio de ajustes de desempenho e melhorias no
+          projeto dos sistemas.
         </li>
         <li>
           Implemento funcionalidades offline-first como parte da reformulação de
@@ -141,8 +214,8 @@
         </li>
         <li>
           Desenvolvo integrações baseadas em filas com AWS SQS e mantenho
-          funções AWS Lambda para garantir a comunicação confiável com serviços
-          de backend.
+          funções AWS Lambda para oferecer comunicação confiável com serviços de
+          backend.
         </li>
         <li>
           Contribuo para decisões de arquitetura e seleção de tecnologias,
@@ -157,23 +230,24 @@
         <li>
           Implemento eventos de negócio no GA4, telemetria com Grafana Faro e
           monitoramento personalizado de conectividade, latência, memória e
-          sinal de rede móvel, reduzindo em 90% os acionamentos da equipe por
-          erros e em 50% os custos com CloudWatch, além de apoiar a investigação
-          de falhas e as decisões de produto.
+          sinal de rede móvel, reduzindo os acionamentos da equipe por erros em
+          <strong>90%</strong> e os custos com CloudWatch em
+          <strong>50%</strong>, além de apoiar a investigação de falhas e as
+          decisões de produto.
         </li>
         <li>
           Aplico fluxos de desenvolvimento com IA orientados por especificações
           e desenvolvo servidores Model Context Protocol (MCP) que conectam
-          agentes a ferramentas de depuração e ao Jira. Essas integrações apoiam
-          a investigação e a verificação da implementação em relação aos
-          requisitos das tarefas, critérios de aceite e resultados de testes,
-          aumentando em aproximadamente 20% a velocidade dos fluxos de
-          desenvolvimento.
+          agentes a ferramentas de depuração e ao Jira, apoiando a investigação
+          e a verificação da implementação em relação aos requisitos das
+          tarefas, critérios de aceite e resultados de testes, aumentando a
+          velocidade dos fluxos de desenvolvimento em aproximadamente
+          <strong>20%</strong>.
         </li>
       </ul>
 
-      <h3>Desenvolvedor Full-Stack &mdash; BYTE RAIN IT SOLUTIONS</h3>
-      <p class="dates">Maio de 2021 &ndash; Setembro de 2025</p>
+      <h3>Desenvolvedor Full-Stack — BYTE RAIN IT SOLUTIONS</h3>
+      <p class="dates">Maio de 2021 – Setembro de 2025</p>
       <ul>
         <li>
           Desenvolvi aplicações web com TypeScript, JavaScript, Vue.js, React e
@@ -181,24 +255,26 @@
         </li>
         <li>
           Desenvolvi uma plataforma imobiliária para o mercado japonês com
-          dezenas de milhares de visitas diárias.
+          <strong>dezenas de milhares de visitas diárias</strong>.
         </li>
         <li>
           Implementei cache com Redis, melhorando o desempenho de APIs e páginas
-          em até 20 vezes.
+          em até
+          <strong>20x</strong>.
         </li>
         <li>
           Desenvolvi dashboards de atendimento ao cliente e logística, reduzindo
-          os tempos de resposta em 30% e os erros manuais em 40%.
+          os tempos de resposta em <strong>30%</strong> e os erros manuais em
+          <strong>40%</strong>.
         </li>
         <li>
           Criei um sistema de acesso universitário por QR code com
-          microsserviços em tempo real e suporte a PWA, atendendo mais de 5.000
-          usuários diariamente.
+          microsserviços em tempo real e suporte a PWA, atendendo
+          <strong>mais de 5.000 usuários diariamente</strong>.
         </li>
         <li>
-          Desenvolvi um sistema de agendamento médico que processa mais de 3.000
-          agendamentos semanais.
+          Desenvolvi um sistema de agendamento médico que processa mais de
+          <strong>3.000 agendamentos semanais</strong>.
         </li>
         <li>
           Projetei bancos de dados PostgreSQL, MySQL e MongoDB utilizando
@@ -212,31 +288,31 @@
     <section class="skills page-two">
       <h2>Competências técnicas</h2>
       <p>
-        TypeScript, JavaScript, React.js, Vue.js, Node.js, Next.js, Nuxt, NestJS,
-        Express.js, Redux, React Query, IndexedDB, Tailwind CSS, React Native,
-        Electron.js, REST APIs, SQL, PostgreSQL, MySQL, MongoDB, Redis, TypeORM,
-        Sequelize, PHP, Laravel, Python, C, C++, AWS Lambda, AWS SQS,
+        TypeScript, JavaScript, React.js, Vue.js, Node.js, Next.js, Nuxt,
+        NestJS, Express.js, Redux, React Query, IndexedDB, Tailwind CSS, React
+        Native, Electron.js, REST APIs, SQL, PostgreSQL, MySQL, MongoDB, Redis,
+        TypeORM, Sequelize, PHP, Laravel, Python, C, C++, AWS Lambda, AWS SQS,
         AWS CloudWatch, Docker, OpenTelemetry, LGTM, Sentry, Crashlytics,
-        Grafana Faro, Google Analytics 4 (GA4), Observability,
-        Clean Architecture, Offline-First Architecture, Microservices,
-        Serverless, Code Reviews, Agile, Scrum, Kanban, Spec-Driven Development,
-        AI Agents, Model Context Protocol (MCP), MCP Server Development,
-        Jira Integration, HTML5, CSS3, Flexbox, Vuex, Composition API,
-        Inertia.js, Progressive Web Apps (PWA), Single-Page Applications (SPA),
-        Unit Testing, Jest, API Mocking, Composer, Database Design,
-        Data Modeling, Object-Relational Mapping (ORM), Performance Optimization,
-        Caching, System Design, Legacy Modernization, Message Queues,
-        Distributed Tracing, Production Debugging, Telemetry, Browser Automation,
-        Internet of Things (IoT), Machine Learning,
-        Agentic Development Workflows, AI Agent Governance, Technical Leadership.
+        Grafana Faro, Google Analytics 4 (GA4), Observability, Clean
+        Architecture, Offline-First Architecture, Microservices, Serverless,
+        Code Reviews, Agile, Scrum, Kanban, Spec-Driven Development, AI Agents,
+        Model Context Protocol (MCP), MCP Server Development, Jira Integration,
+        HTML5, CSS3, Flexbox, Vuex, Composition API, Inertia.js, Progressive Web
+        Apps (PWA), Single-Page Applications (SPA), Unit Testing, Jest, API
+        Mocking, Composer, Database Design, Data Modeling, Object-Relational
+        Mapping (ORM), Performance Optimization, Caching, System Design, Legacy
+        Modernization, Message Queues, Distributed Tracing, Production
+        Debugging, Telemetry, Browser Automation, Internet of Things (IoT),
+        Machine Learning, Agentic Development Workflows, AI Agent Governance,
+        Technical Leadership.
       </p>
     </section>
+
     <section class="education">
       <h2>Formação acadêmica</h2>
       <p>
-        <strong>Bacharelado em Engenharia Química &mdash; Faculdade UCL</strong
-        ><br />
-        2015 &ndash; 2021
+        <strong>Bacharelado em Engenharia Química — Faculdade UCL</strong
+        ><br />2015 – 2021
       </p>
     </section>
 
@@ -244,20 +320,17 @@
       <h2>Cursos e aperfeiçoamento</h2>
       <ul>
         <li>
-          <strong>Node.js: Advanced Concepts</strong> &mdash; Udemy, junho de
-          2025
+          <strong>Node.js: Advanced Concepts</strong> — Udemy, junho de 2025
         </li>
         <li>
-          <strong>The Complete SQL Bootcamp</strong> &mdash; Udemy, janeiro de
-          2025
+          <strong>The Complete SQL Bootcamp</strong> — Udemy, janeiro de 2025
         </li>
         <li>
-          <strong>The Last Algorithms Course You'll Need</strong> &mdash;
-          Frontend Masters, novembro de 2024
+          <strong>The Last Algorithms Course You'll Need</strong> — Frontend
+          Masters, novembro de 2024
         </li>
         <li>
-          <strong>Formação TypeScript e Framework Vue 3</strong> &mdash; Alura,
-          2023
+          <strong>Formação TypeScript e Framework Vue 3</strong> — Alura, 2023
         </li>
       </ul>
     </section>
@@ -265,10 +338,9 @@
     <section class="languages">
       <h2>Idiomas</h2>
       <p>
-        Português: Nativo &middot; Inglês: Fluente &middot; Japonês: Avançado
-        &middot; Espanhol: Avançado
+        Português: Nativo · Inglês: Fluente · Japonês: Avançado · Espanhol:
+        Avançado
       </p>
     </section>
   </body>
 </html>
-
